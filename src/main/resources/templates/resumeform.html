@@ -48,7 +48,7 @@
           th:errors="*{year}"></span><br/>
     <br/>
 
-    <h2>Optional Entries for Additional Education</h2>
+    <h2>Additional Education</h2>
     Degree: <input type="text" th:field="*{degree2}" />
     <span th:if="${#fields.hasErrors('degree2')}"
           th:errors="*{degree2}"></span>
@@ -61,6 +61,22 @@
     <span th:if="${#fields.hasErrors('year2')}"
           th:errors="*{year2}"></span><br/>
     <br/>
+
+    Degree: <input type="text" th:field="*{degree3}" />
+    <span th:if="${#fields.hasErrors('degree3')}"
+          th:errors="*{degree3}"></span>
+
+    School: <input type="text" th:field="*{school3}" />
+    <span th:if="${#fields.hasErrors('school3')}"
+          th:errors="*{school3}"></span><br/>
+
+    Year: <input type="text" th:field="*{year3}" />
+    <span th:if="${#fields.hasErrors('year3')}"
+          th:errors="*{year3}"></span><br/>
+    <br/>
+
+
+
 
 
     <hr/>
@@ -87,6 +103,54 @@
     <br/>
 
 
+    <h2>Additional Experience</h2>
+    Position: <input type="text" th:field="*{position2}" />
+    <span th:if="${#fields.hasErrors('position2')}"
+          th:errors="*{position2}"></span><br/>
+
+    Company: <input type="text" th:field="*{company2}" />
+    <span th:if="${#fields.hasErrors('company2')}"
+          th:errors="*{company2}"></span><br/>
+
+    Location: <input type="text" th:field="*{location2}" />
+    <span th:if="${#fields.hasErrors('location2')}"
+          th:errors="*{location2}"></span><br/>
+
+    Duration: <input type="text" th:field="*{duration2}" />
+    <span th:if="${#fields.hasErrors('duration2')}"
+          th:errors="*{duration2}"></span><br/>
+
+    Description: <textarea rows="3" th:field="*{description2}" />
+    <span th:if="${#fields.hasErrors('description2')}"
+          th:errors="*{description2}"></span><br/>
+    <br/>
+
+
+    <h2>Additional Experience</h2>
+    Position: <input type="text" th:field="*{position3}" />
+    <span th:if="${#fields.hasErrors('position3')}"
+          th:errors="*{position3}"></span><br/>
+
+    Company: <input type="text" th:field="*{company3}" />
+    <span th:if="${#fields.hasErrors('company3')}"
+          th:errors="*{company3}"></span><br/>
+
+    Location: <input type="text" th:field="*{location3}" />
+    <span th:if="${#fields.hasErrors('location3')}"
+          th:errors="*{location3}"></span><br/>
+
+    Duration: <input type="text" th:field="*{duration3}" />
+    <span th:if="${#fields.hasErrors('duration3')}"
+          th:errors="*{duration3}"></span><br/>
+
+    Description: <textarea rows="3" th:field="*{description3}" />
+    <span th:if="${#fields.hasErrors('description3')}"
+          th:errors="*{description3}"></span><br/>
+    <br/>
+
+
+
+
     <hr/>
     <h2>Skills</h2>
     Skill: <input type="text" th:field="*{skill}" />
@@ -98,6 +162,23 @@
           th:errors="*{level}"></span><br/>
 
 
+    <h2>Additional Skills</h2>
+    Skill: <input type="text" th:field="*{skill2}" />
+    <span th:if="${#fields.hasErrors('skill2')}"
+          th:errors="*{skill2}"></span><br/>
+
+    Level: <input type="text" th:field="*{level2}" />
+    <span th:if="${#fields.hasErrors('level2')}"
+          th:errors="*{level2}"></span><br/>
+
+    <h2>Additional Skills</h2>
+    Skill: <input type="text" th:field="*{skill3}" />
+    <span th:if="${#fields.hasErrors('skill3')}"
+          th:errors="*{skill3}"></span><br/>
+
+    Level: <input type="text" th:field="*{level3}" />
+    <span th:if="${#fields.hasErrors('level3')}"
+          th:errors="*{level3}"></span><br/>
 
     <input type="submit" value="Submit" />
 </form>

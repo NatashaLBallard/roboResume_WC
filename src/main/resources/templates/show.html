@@ -9,72 +9,63 @@
 
 
     <h2>General</h2>
-    Name: <span th:text="${resume.name}"></span><br/>
-    Email: <span th:text="${resume.email}"></span><br/>
-    LinkedIn: <span th:text="${resume.linkedin}"></span><br/>
-    GitHub: <span th:text="${resume.github}"></span><br/>
-    Twitter: <span th:text="${resume.twitter}"></span><br/>
+    <span th:text="${resume.name}"></span><br/>
+    <span th:text="${resume.email}"></span><br/>
+    <span th:text="${resume.linkedin}"></span><br/>
+    <span th:text="${resume.github}"></span><br/>
+    <span th:text="${resume.twitter}"></span><br/>
     <br/>
 
     <h2>Education</h2>
-    Degree: <span th:text="${resume.degree}"></span><br/>
-    School: <span th:text="${resume.school}"></span><br/>
-    Year: <span th:text="${resume.year}"></span><br/>
+     <span th:text="${resume.degree}"></span><br/>
+    <span th:text="${resume.school}"></span><br/>
+    <span th:text="${resume.year}"></span><br/>
     <br/>
-    <!--Degree:<span th:text="${resume.school2}" th:unless="${resume.isEmpty(school2)}"></span><br/> -->
-    <!--Degree: <span th:if="${resume.degree2} ==null" th:text="${resume?.degree2}"></span><br/> -->
-
-
-
-
-    <!--Degree: <span th:text="${resume?.degree2}"></span><br/>
-    School: <span th:text="${resume?.school2}"></span><br/>
-    Year: <span th:text="${resume?.year2}"></span><br/>  -->
-
-
-
-
-
-
-
-    <!--<div th:if="${resume.degree2.isEmpty()}">
-        <h3>Name:</h3><h3 th:text="${resume.degree2}"></h3>
-        <h3>Name:</h3><h3 th:text="${resume.school2}"></h3>
-        <h3>Name:</h3><h3 th:text="${resume.year2}"></h3>
-    </div> -->
-
-  <!--  <span th:if ="${resume.degree2} != null" >Degree:</span> -->
-
-    <!--<div th:if ="${resume?.degree2 ==null}" >Degree:-->
-
-    <!--<span th:if ="${resume.degree2 ==null}" >Degree: </span>
-    <span th:text="${resume.degree2}" ></span><br/> THIS WORKS-->
-
-    <div th:if ="${resume?.degree2 !=null}" text="Degree:" >Degreeeee:
-    <span th:text="${resume.degree2}" ></span></div>
-
+    <span th:text="${resume.degree2}" ></span><br/>
+    <span th:text="${resume.school2}"></span><br/>
+    <span th:text="${resume.year2}"></span><br/>
     <br/>
-
-<!--<span>
-       <td th:text="${resume.degree2}"></td>
-        <td th:text="${resume.school2}"></td>
-        <td th:text="${resume.year2}"></td>
-    </span>-->
-
+    <span th:text="${resume.degree3}"></span><br/>
+    <span th:text="${resume.school3}"></span><br/>
+    <span th:text="${resume.year3}"></span><br/>
+    <br/>
 
 
 
     <h2>Experience</h2>
-    Position: <span th:text="${resume.position}"></span><br/>
-    Company: <span th:text="${resume.company}"></span><br/>
-    Location: <span th:text="${resume.location}"></span><br/>
-    Duration: <span th:text="${resume.duration}"></span><br/>
-    Description: <span th:text="${resume.description}"></span><br/>
+    <span th:text="${resume.position}"></span><br/>
+    <span th:text="${resume.company}"></span><br/>
+    <span th:text="${resume.location}"></span><br/>
+    <span th:text="${resume.duration}"></span><br/>
+    <span th:text="${resume.description}"></span><br/>
+    <br/>
+    <span th:text="${resume.position2}"></span><br/>
+    <span th:text="${resume.company2}"></span><br/>
+    <span th:text="${resume.location2}"></span><br/>
+    <span th:text="${resume.duration2}"></span><br/>
+    <span th:text="${resume.description2}"></span><br/>
+    <br/>
+    <span th:text="${resume.position3}"></span><br/>
+    <span th:text="${resume.company3}"></span><br/>
+    <span th:text="${resume.location3}"></span><br/>
+    <span th:text="${resume.duration3}"></span><br/>
+    <span th:text="${resume.description3}"></span><br/>
     <br/>
 
+
+
+
+
+
     <h2>Skills</h2>
-    Skill: <span th:text="${resume.skill}"></span><br/>
-    Level: <span th:text="${resume.level}"></span><br/>
+    <span th:text="${resume.skill}"></span><br/>
+    <span th:text="${resume.level}"></span><br/>
+    <br/>
+    <span th:text="${resume.skill2}"></span><br/>
+    <span th:text="${resume.level2}"></span><br/>
+    <br/>
+    <span th:text="${resume.skill3}"></span><br/>
+    <span th:text="${resume.level3}"></span><br/>
     <br/>
 
     <a th:href="@{/delete/{id}(id=${resume.id})}">Delete this course</a>
