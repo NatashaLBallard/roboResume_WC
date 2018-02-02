@@ -39,6 +39,7 @@ public class MainController {
         return "redirect:/";
         }
 
+
     @RequestMapping("/detail/{id}")
     public String showResume(@PathVariable("id") long id, Model model) {
         model.addAttribute("resume", resumeRepository.findOne(id));

@@ -51,6 +51,13 @@ public class Resume {
     @Size(min=4)
     private String year;
 
+    //Optional Entries - Max of 3 for Education
+
+    private String degree2;
+
+    private String school2;
+
+    private String year2;
 
     //Experience ----------------------------------------------------------------
     @NotNull
@@ -80,8 +87,10 @@ public class Resume {
     @Size(min=3)
     private String skill;
 
+
+
     @NotNull
-    @Size(min=5)
+    @Size(min=1, max=5)
     private String level;
 
 
@@ -213,5 +222,29 @@ public class Resume {
 
     public void setLevel(String level) {
         this.level = level;
+    }
+
+    public String getDegree2() {
+        return degree2;
+    }
+
+    public void setDegree2(String degree2) {
+        this.degree2 = degree2;
+    }
+
+    public String getSchool2() {
+        return school2;
+    }
+
+    public void setSchool2(String school2) {
+        this.school2 = school2;
+    }
+
+    public String getYear2() {
+        return year2;
+    }
+
+    public void setYear2(String year2) {
+        this.year2 = year2;
     }
 }

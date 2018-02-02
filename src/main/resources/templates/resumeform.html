@@ -32,9 +32,8 @@
     <span th:if="${#fields.hasErrors('twitter')}"
           th:errors="*{twitter}"></span><br/>
     <br/>
-
-
     <hr/>
+
     <h2>Education</h2>
     Degree: <input type="text" th:field="*{degree}" />
     <span th:if="${#fields.hasErrors('degree')}"
@@ -47,6 +46,20 @@
     Year: <input type="text" th:field="*{year}" />
     <span th:if="${#fields.hasErrors('year')}"
           th:errors="*{year}"></span><br/>
+    <br/>
+
+    <h2>Optional Entries for Additional Education</h2>
+    Degree: <input type="text" th:field="*{degree2}" />
+    <span th:if="${#fields.hasErrors('degree2')}"
+          th:errors="*{degree2}"></span>
+
+    School: <input type="text" th:field="*{school2}" />
+    <span th:if="${#fields.hasErrors('school2')}"
+          th:errors="*{school2}"></span><br/>
+
+    Year: <input type="text" th:field="*{year2}" />
+    <span th:if="${#fields.hasErrors('year2')}"
+          th:errors="*{year2}"></span><br/>
     <br/>
 
 
@@ -84,7 +97,6 @@
     <span th:if="${#fields.hasErrors('level')}"
           th:errors="*{level}"></span><br/>
 
-    <br/>
 
 
     <input type="submit" value="Submit" />

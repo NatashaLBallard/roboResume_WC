@@ -21,6 +21,48 @@
     School: <span th:text="${resume.school}"></span><br/>
     Year: <span th:text="${resume.year}"></span><br/>
     <br/>
+    <!--Degree:<span th:text="${resume.school2}" th:unless="${resume.isEmpty(school2)}"></span><br/> -->
+    <!--Degree: <span th:if="${resume.degree2} ==null" th:text="${resume?.degree2}"></span><br/> -->
+
+
+
+
+    <!--Degree: <span th:text="${resume?.degree2}"></span><br/>
+    School: <span th:text="${resume?.school2}"></span><br/>
+    Year: <span th:text="${resume?.year2}"></span><br/>  -->
+
+
+
+
+
+
+
+    <!--<div th:if="${resume.degree2.isEmpty()}">
+        <h3>Name:</h3><h3 th:text="${resume.degree2}"></h3>
+        <h3>Name:</h3><h3 th:text="${resume.school2}"></h3>
+        <h3>Name:</h3><h3 th:text="${resume.year2}"></h3>
+    </div> -->
+
+  <!--  <span th:if ="${resume.degree2} != null" >Degree:</span> -->
+
+    <!--<div th:if ="${resume?.degree2 ==null}" >Degree:-->
+
+    <!--<span th:if ="${resume.degree2 ==null}" >Degree: </span>
+    <span th:text="${resume.degree2}" ></span><br/> THIS WORKS-->
+
+    <div th:if ="${resume?.degree2 !=null}" text="Degree:" >Degreeeee:
+    <span th:text="${resume.degree2}" ></span></div>
+
+    <br/>
+
+<!--<span>
+       <td th:text="${resume.degree2}"></td>
+        <td th:text="${resume.school2}"></td>
+        <td th:text="${resume.year2}"></td>
+    </span>-->
+
+
+
 
     <h2>Experience</h2>
     Position: <span th:text="${resume.position}"></span><br/>
