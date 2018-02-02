@@ -11,9 +11,9 @@
     <h2>General</h2>
     <span th:text="${resume.name}"></span><br/>
     <span th:text="${resume.email}"></span><br/>
-    <span th:text="${resume.linkedin}"></span><br/>
-    <span th:text="${resume.github}"></span><br/>
-    <span th:text="${resume.twitter}"></span><br/>
+    <a th:href="@{'//'+${resume.linkedin}}" target="_blank"><span th:text="${resume.linkedin}"></span></a><br/>
+    <a th:href="@{'//'+${resume.github}}" target="_blank"><span th:text="${resume.github}"></span></a><br/>
+    <a th:href="@{'//'+${resume.twitter}}" target="_blank"><span th:text="${resume.twitter}"></span></a><br/>
     <br/>
 
     <h2>Education</h2>
