@@ -5,14 +5,34 @@
     <title>Summary</title>
 </head>
 <body>
-<a href="/add">Add Resume</a><br/>
-<table>
+<a href="/add">Add Resume</a>
+
+<br/><br/>
+<h3>General</h3>
+<table border="1">
     <tr>
         <th>Name</th>
         <th>Email</th>
         <th>LinkedIn</th>
         <th>GitHub</th>
         <th>Twitter</th>
+    </tr>
+
+    <tr th:each="resume: ${resumes}">
+        <!--General Education-->
+        <td th:text="${resume.name}"></td>
+        <td th:text="${resume.email}"></td>
+        <td th:text="${resume.linkedin}"></td>
+        <td th:text="${resume.github}"></td>
+        <td th:text="${resume.twitter}"></td>
+    </tr>
+</table>
+
+<br/><br/>
+<h3>General</h3>
+<table border="1">
+    <tr>
+        <!--Education-->
         <th>Degree</th>
         <th>School</th>
         <th>Year</th>
@@ -23,6 +43,26 @@
         <th>Degree - 3</th>
         <th>School - 3</th>
         <th>Year - 3</th>
+    </tr>
+    <tr th:each="resume: ${resumes}">
+        <!-- Education-->
+        <td th:text="${resume.degree}"></td>
+        <td th:text="${resume.school}"></td>
+        <td th:text="${resume.year}"></td>
+        <!--Optional Education-->
+        <td th:text="${resume.degree2}"></td>
+        <td th:text="${resume.school2}"></td>
+        <td th:text="${resume.year2}"></td>
+        <td th:text="${resume.degree3}"></td>
+        <td th:text="${resume.school3}"></td>
+        <td th:text="${resume.year3}"></td>
+</tr>
+</table>
+
+<br/><br/>
+<h3>General</h3>
+<table border="1">
+    <tr>
         <!--Experience-->
         <th>Position</th>
         <th>Company</th>
@@ -40,36 +80,8 @@
         <th>Location - 3</th>
         <th>Duration - 3</th>
         <th>Description - 3</th>
-        <!--Skills-->
-        <th>Skill</th>
-        <th>Level</th>
-        <!--Optional Skills-->
-        <th>Skill - 2</th>
-        <th>Level - 2</th>
-        <th>Skill - 3</th>
-        <th>Level - 3</th>
-
-
-
     </tr>
     <tr th:each="resume: ${resumes}">
-        <!--General Education-->
-        <td th:text="${resume.name}"></td>
-        <td th:text="${resume.email}"></td>
-        <td th:text="${resume.linkedin}"></td>
-        <td th:text="${resume.github}"></td>
-        <td th:text="${resume.twitter}"></td>
-        <!-- Education-->
-        <td th:text="${resume.degree}"></td>
-        <td th:text="${resume.school}"></td>
-        <td th:text="${resume.year}"></td>
-        <!--Optional Education-->
-        <td th:text="${resume.degree2}"></td>
-        <td th:text="${resume.school2}"></td>
-        <td th:text="${resume.year2}"></td>
-        <td th:text="${resume.degree3}"></td>
-        <td th:text="${resume.school3}"></td>
-        <td th:text="${resume.year3}"></td>
         <!--Experience-->
         <td th:text="${resume.position}"></td>
         <td th:text="${resume.company}"></td>
@@ -87,6 +99,23 @@
         <td th:text="${resume.location3}"></td>
         <td th:text="${resume.duration3}"></td>
         <td th:text="${resume.description3}"></td>
+    </tr>
+</table>
+
+<br/><br/>
+<h3>General</h3>
+<table border="1">
+    <tr>
+        <!--Skills-->
+        <th>Skill</th>
+        <th>Level</th>
+        <!--Optional Skills-->
+        <th>Skill - 2</th>
+        <th>Level - 2</th>
+        <th>Skill - 3</th>
+        <th>Level - 3</th>
+    </tr>
+    <tr th:each="resume: ${resumes}">
         <!--Skills-->
         <td th:text="${resume.skill}"></td>
         <td th:text="${resume.level}"></td>
@@ -95,11 +124,14 @@
         <td th:text="${resume.level2}"></td>
         <td th:text="${resume.skill3}"></td>
         <td th:text="${resume.level3}"></td>
+    </tr>
+</table>
 
 
-
-
-
+<br/><br/>
+<h3>General</h3>
+<table border="1">
+    <tr th:each="resume: ${resumes}">
         <td>
             <a th:href="@{/update/{id}(id=${resume.id})}">Update</a>
             <a th:href="@{/detail/{id}(id=${resume.id})}">Details</a>
