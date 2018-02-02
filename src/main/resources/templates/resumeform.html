@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${resume}"
+      method="post">
+    <input type="hidden" th:field="*{id}" />
+
+    <h2>General</h2>
+    Name: <input type="text" th:field="*{name}" />
+    <span th:if="${#fields.hasErrors('name')}"
+          th:errors="*{name}"></span><br/>
+
+    Email: <input type="text" th:field="*{email}" />
+    <span th:if="${#fields.hasErrors('email')}"
+          th:errors="*{email}"></span><br/>
+
+    LinkedIn: <input type="text" th:field="*{linkedin}" />
+    <span th:if="${#fields.hasErrors('linkedin')}"
+          th:errors="*{linkedin}"></span><br/>
+
+    GitHub: <input type="text" th:field="*{github}" />
+    <span th:if="${#fields.hasErrors('github')}"
+          th:errors="*{github}"></span><br/>
+
+    Twitter: <input type="text" th:field="*{twitter}" />
+    <span th:if="${#fields.hasErrors('twitter')}"
+          th:errors="*{twitter}"></span><br/>
+    <br/>
+
+
+
+    <h2>Education</h2>
+    Degree: <input type="text" th:field="*{degree}" />
+    <span th:if="${#fields.hasErrors('degree')}"
+          th:errors="*{degree}"></span><br/>
+
+    School: <input type="text" th:field="*{school}" />
+    <span th:if="${#fields.hasErrors('school')}"
+          th:errors="*{school}"></span><br/>
+
+    Year: <input type="text" th:field="*{year}" />
+    <span th:if="${#fields.hasErrors('year')}"
+          th:errors="*{year}"></span><br/>
+    <br/>
+
+
+
+    <h2>Experience</h2>
+    Name: <input type="text" th:field="*{name}" />
+    <span th:if="${#fields.hasErrors('name')}"
+          th:errors="*{name}"></span><br/>
+
+    Email: <input type="text" th:field="*{email}" />
+    <span th:if="${#fields.hasErrors('email')}"
+          th:errors="*{email}"></span><br/>
+
+    LinkedIn: <input type="text" th:field="*{linkedin}" />
+    <span th:if="${#fields.hasErrors('linkedin')}"
+          th:errors="*{linkedin}"></span><br/>
+
+    GitHub: <input type="text" th:field="*{github}" />
+    <span th:if="${#fields.hasErrors('github')}"
+          th:errors="*{github}"></span><br/>
+
+    Twitter: <input type="text" th:field="*{twitter}" />
+    <span th:if="${#fields.hasErrors('twitter')}"
+          th:errors="*{twitter}"></span><br/>
+    <br/>
+
+
+
+
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
